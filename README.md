@@ -18,7 +18,67 @@ On mac/linux, double-click on `Ikemen_GO.command`
 These instructions are for those interested in developing the Ikemen_GO engine. Instructions on contributing with custom stages, fonts, characters and other resources can be found in the community forum.
 
 ### Building on Windows
-Check the instructions [here](https://github.com/Windblade-GR01/Ikemen_GO/wiki/Building-on-Windows)
+
+Prérequis :
+Télécharger MSYS2
+https://www.msys2.org
+
+Modifier les variables d'environnement
+dans tart menu tapez "env" et choisissez
+"Modifier les variables d'environnement pour votre compte"
+Allez dans l'onglet "Paramètre système avancés"
+et cliquez sur "Variables d'environnement..."
+
+Dans le cadre du bas "Variables systèmes" selectionnez la variable "Path" dans la liste et cliquez sur "Modifier..."
+Dans la nouvelle fenêtre cliquez sur "Nouveau"
+et copiez/collez
+C:\msys64\mingw64\bin
+refaites un deuxième fois l'opération avec
+C:\msys64\usr\bin
+Cliquez sur "OK" pour fermer toute les fenêtres
+Redémmarez
+(Pour verifier le path dans le powershell tapez "$env:PATH")
+
+Dans un terminal en admin tapez
+pacman -S mingw-w64-x86_64-gcc
+
+Téléchargez
+openal-soft-1.20.1-bin.zip
+ici
+https://openal-soft.org/openal-binaries/openal-soft-1.20.1-bin.zip
+Décompessez le contenu de \include\ (le dossier AL) de l'archive dans 
+C:\msys64\mingw64\include
+
+Décompessez le fichier libOpenAL32.dll.a se trouvant dans \libs\Win64\ de l'archive dans 
+C:\msys64\mingw64\lib
+
+Installez Go-lang
+https://golang.org/doc/install?download=go1.15.6.windows-amd64.msi
+lancez l'installateur et attendez que le bouton "Next" soit disponible et lancez l'installation
+
+Installez Git
+https://git-scm.com/download/win
+'clic droit' sur "Git-2.30.0-64-bit.exe" et "Exécuter en tant qu'administrateur"
+cliquez "Next >" jusqu'à la fenêtre "Adjusting your PATH environment"
+choisissez "Use Git and optional Unix tools from the Command Prompt"
+puis cliquez "Next >" jusqu'à la fin de l'installation
+
+
+Compilation
+lancez
+C:\msys64\mingw64.exe
+
+et
+git clone https://github.com/Windblade-GR01/Ikemen-GO.git
+le git sera téléchargé dans
+C:\msys64\home
+allez dans
+C:\msys64\home\yourname*\Ikemen-GO\build
+et lancez "get.cmd" attendez de voir "Appuyez sur une touche pour continuer...", cela prend du temps
+puis
+lancez "build.bat"
+L'executable se trouvera dans "C:\msys64\home\Harry\Ikemen-GO\bin"
+
 
 ### Building on Mac
 Check the insturctions [here](https://github.com/Windblade-GR01/Ikemen_GO/wiki/Building-on-MacOS)
