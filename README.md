@@ -122,7 +122,7 @@ puis
 
 lancez "build.bat"
 
-L'executable se trouvera dans "C:\msys64\home\Harry\Ikemen-GO\bin"
+L'executable se trouvera dans "C:\msys64\home\yourname*\Ikemen-GO\bin"
 
 
 ### Building on Mac
