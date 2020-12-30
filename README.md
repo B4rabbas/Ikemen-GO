@@ -66,7 +66,7 @@ C:\msys64\mingw64.exe
   
 et  
   
-git clone https://github.com/K4thos/Ikemen_GO.git
+git clone https://github.com/Windblade-GR01/Ikemen-GO.git
   
 le git sera téléchargé dans  
 C:\msys64\home  
